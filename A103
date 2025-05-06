@@ -1,22 +1,14 @@
 import java.util.Scanner;
 
-public class A103Prova {
+public class A103ERRADO {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int inteiro1 = scanner.nextInt();
         System.out.println("Leia o valor de numero base: ");
-        System.out.println(inteiro1);
+        int inteiro1 = scanner.nextInt();
+        System.out.println("Leia o valor do limite ");
         int inteiro2 = scanner.nextInt();
-        System.out.println("Leia o valor de limite que tenha duas unidades de inteiros maior que o valor da base: ");
-        System.out.println(inteiro2);
-        if (inteiro1 < inteiro2) {
-            int valores = inteiro2 - inteiro1;
-            System.out.println(valores);
-            int valores2 = inteiro2 - (inteiro1 - 1);
-            System.out.println(valores2);
-            System.out.println("Multiplos de base até o valor limite são: " + valores * inteiro1);
-            System.out.println("Multiplos de base até o valor limite são: " + valores2 * inteiro1);
-            System.out.println("Multiplos de base até o valor limite são: " + inteiro2 * inteiro1);
+        for (int i = inteiro1; i <= inteiro2; i+= inteiro1) {
+            System.out.println(i + " ");
         }
     }
 }
