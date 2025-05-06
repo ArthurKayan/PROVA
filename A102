@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class A102Prova {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int peso = scanner.nextInt();
+        System.out.println("Leia o valor de peso: ");
+        System.out.println(peso);
+        double altura = scanner.nextDouble();
+        System.out.println("Leia a altura: ");
+        System.out.println(altura);
+        String sexo = scanner.nextLine();
+        System.out.println("Leia o sexo: M OU F ");
+        System.out.println(sexo);
+        double calculoIMC = peso / (altura * altura);
+        System.out.println("Calculo do IMC É: ");
+        System.out.println(calculoIMC);
+        if (sexo == "M") {
+            if (calculoIMC >= 40) {
+                System.out.println("Obesidade Mórbida");
+            }
+            if (calculoIMC == 20 && 24.9) ;
+            System.out.println("Normal");
+        }
+        if (calculoIMC <= 20) {
+            System.out.println("Abaixo do peso");
+        }
+        if (calculoIMC == 25 && 29.9) {
+            System.out.println("Sobrepeso");
+        }
+        if (calculoIMC == 30 && 39.9) {
+            System.out.println("Obesidade");
+        }
+    }
+    if(sexo == "F"){
+        if (calculoIMC >= 39) {
+            System.out.println("Obesidade Mórbida");
+        }
+        if (calculoIMC == 19 && 23.9) {
+            System.out.println("Normal");
+        }
+        if (calculoIMC <= 19) {
+            System.out.println("Abaixo do peso");
+        }
+        if (calculoIMC == 24 && 28.9) {
+            System.out.println("Sobrepeso");
+        }
+        if (calculoIMC == 29 && 38.9) {
+            System.out.println("Obesidade");
+        }
+    }
+}
