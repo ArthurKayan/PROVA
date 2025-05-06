@@ -1,3 +1,4 @@
+//Errada
 import java.util.Scanner;
 public class A102Prova {
     public static void main(String[] args) {
@@ -46,6 +47,60 @@ public class A102Prova {
         }
         if (calculoIMC == 29 && 38.9) {
             System.out.println("Obesidade");
+        }
+    }
+}
+//Certa
+import java.util.Scanner;
+public class A102Prova {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Leia o valor de peso: ");
+        int peso = scanner.nextInt();
+        System.out.println(peso);
+        System.out.println("Leia a altura: ");
+        double altura = scanner.nextDouble();
+        System.out.println(altura);
+        double calculoIMC = peso / (altura * altura);
+        System.out.println("Calculo do IMC É: ");
+        System.out.println(calculoIMC);
+        scanner.nextLine();
+        System.out.println("Digite o sexo M|F ");
+        String sexo = scanner.nextLine();
+        System.out.println("Sexo digitado foi " + sexo);
+        if (sexo.equals("M")) {
+            if (calculoIMC >= 40) {
+                System.out.println("Condição corporal: Obesidade Mórbida");
+            }
+            if ((calculoIMC >= 20) && (calculoIMC < 24.9)) {
+                System.out.println("Condição corporal: Normal");
+            }
+            if (calculoIMC <= 20) {
+                System.out.println("Condição corporal: Abaixo do peso");
+            }
+            if ((calculoIMC >= 25) && (calculoIMC <= 29.9)) {
+                System.out.println("Condição corporal: Sobrepeso");
+            }
+            if ((calculoIMC >= 30) && (calculoIMC <= 39.9)) {
+                System.out.println("Condição corporal: Obesidade");
+            }
+        }
+        if (sexo.equals("F")) {
+            if (calculoIMC >= 39) {
+                System.out.println("Condição corporal: Obesidade Mórbida");
+            }
+            if ((calculoIMC >= 19) && (calculoIMC < 23.9)) {
+                System.out.println("Condição corporal: Normal");
+            }
+            if (calculoIMC <= 19) {
+                System.out.println("Condição corporal: Abaixo do peso");
+            }
+            if ((calculoIMC >= 24) && (calculoIMC <= 28.9)) {
+                System.out.println("Condição corporal: Sobrepeso");
+            }
+            if ((calculoIMC >= 29) && (calculoIMC <= 38.9)) {
+                System.out.println("Condição corporal: Obesidade");
+            }
         }
     }
 }
